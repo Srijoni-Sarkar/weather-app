@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AI Weather</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="weather-card" id="weatherCard">
+      <div class="top-bar">
+        <h2 id="locationTitle">Your Location</h2>
+        <div class="search-box">
+          <input type="text" id="cityInput" placeholder="Search city...">
+          <button onclick="searchCityWeather()"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+        </div>
+      </div>
+      <p id="localTime"><i class="fa-solid fa-clock"></i> Fetching time...</p>
+      <div class="weather-icon" id="weatherIcon">☁</div>
+      <h1 id="temp">--°C</h1>
+      <p id="weatherDesc">--</p>
+      <p class="location-msg" id="locationName">Please search for a location manually</p>
+
+      <div class="grid">
+        <div>Feels Like: <span id="feels">--°C</span></div>
+        <div>Pressure: <span id="pressure">--</span> hPa</div>
+        <div>Humidity: <span id="humidity">--</span>%</div>
+        <div>Wind: <span id="wind">--</span> km/h</div>
+      </div>
+
+      <p id="error" class="error"></p>
+
+      <ul id="suggestions" class="suggestions-list"></ul>
+    </div>
+
+    <button class="chat-btn" onclick="toggleChat()"><i class="fa-solid fa-comment"></i></button>
+
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-header">
+        <span>Weather Assistant</span>
+        <button onclick="toggleChat()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="message bot-msg initial-msg">How can I help you today?</div>
+        <div id="typingIndicator" class="message typing-indicator" style="display: none;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type..." onkeydown="handleEnter(event)">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
