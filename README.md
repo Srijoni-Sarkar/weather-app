@@ -28,6 +28,7 @@ A simple and beautiful weather forecast web app that allows users to:
 - [OpenWeatherMap API](https://openweathermap.org/api)
 - [TimeZoneDB API](https://timezonedb.com/api)
 
+---
 
 ## Click here to view the weather app
 https://weather-2025-feb6.web.app
