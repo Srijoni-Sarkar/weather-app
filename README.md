@@ -17,6 +17,7 @@ A simple and beautiful weather forecast web app that allows users to:
 - 📈 **Temperature**, **weather conditions**, **humidity**, **wind**, and more
 - 🎭 **Dynamic emojis/icons** based on weather
 - 💡 Smooth and minimal UI
+- 💬 Weather chatbot assistant 
 
 ---
 
@@ -27,6 +28,7 @@ A simple and beautiful weather forecast web app that allows users to:
 - **JavaScript (Vanilla JS)**
 - [OpenWeatherMap API](https://openweathermap.org/api)
 - [TimeZoneDB API](https://timezonedb.com/api)
+- [Gemini API]
 
 ---
 
